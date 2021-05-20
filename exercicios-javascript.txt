@@ -1,0 +1,785 @@
+Exercício 1 - prompt e console.log()
+var NOME = prompt("Digite seu nome","");
+console.log("Olá " + NOME + " seja bem vindo(a)");
+
+*****************
+Exercício 2 - parseInt()
+var N1 = parseInt(prompt("Digite um número",""));
+var N2 = parseInt(prompt("Digite outro número",""));
+var SOMA = N1 + N2;
+console.log("A soma dos números é: " + SOMA);
+
+*****************
+Exercício 3 - concatenando
+var NOME = prompt("Digite seu nome","");
+var END = prompt("Digite seu endereço","");
+var CID = prompt("Digite sua cidade","");
+var UF = prompt("Digite seu estado","");
+var CEP = prompt("Digite seu CEP","");
+var FONE = prompt("Digite seu fone","");
+
+console.log("Confora seus dados:");
+console.log(NOME);
+console.log(END);
+console.log(CID + " - " + UF);
+console.log(CEP);
+console.log(FONE);
+
+*****************
+Exercício 4 - cálculo de idade
+var ANONASC = parseInt(prompt("Digite o ano em que nasceu",""));
+var ANOATUAL = parseInt(prompt("Digite o ano atual",""));
+var IDADE = ANOATUAL - ANONASC;
+console.log("Você tem " + IDADE + " anos");
+
+*****************
+Exercício 5 - calculadora
+var RESP = 0;
+var N1 = parseInt(prompt("Digite o primeiro número",""));
+var OP = prompt("Qual operação deseja efetuar (+) (-) (*) (/)?","");
+var N2 = parseInt(prompt("Digite o segundo número",""));
+
+switch (OP){
+   case "+":
+      RESP = N1 + N2;
+      break;
+   case "-":
+      RESP = N1 - N2;
+      break;
+   case "*":
+      RESP = N1 * N2;
+      break;
+   case "/":
+      RESP = N1 / N2;
+      break;
+   default:
+      console.log("Operação inválida");
+}
+
+console.log("O valor de sua conta é: " + RESP);
+
+******************************
+Criando um menu com sub-menu
+******************************
+console.group("Cursos");
+   console.groupCollapsed("Web");
+      console.log("HTML");
+      console.log("CSS");
+      console.log("Javascript");
+   console.groupEnd();
+
+   console.groupCollapsed("Desktop");
+      console.log("Photoshop");
+      console.log("Illustrator");
+      console.log("Corel Draw");
+   console.groupEnd();
+console.groupEnd();
+
+*****************************
+Exibindo uma caixa de mensagem
+*****************************
+alert("Mensagem");
+
+****************************
+Usando o JSFiddle.net
+****************************
+
+Exercício 06 - condicional simples
+var NUM = parseInt(prompt("Digite o número 5",""));
+if (NUM == 5){
+console.log("Parabéns você acertou!");
+}
+
+***************************
+Exercício 07 - condicional composta
+var NUM = parseInt(prompt("Digite o número 5",""));
+if (NUM == 5){
+   document.getElementById("resp").innerHTML = "Parabéns você acertou";
+}
+else{
+   document.getElementById("resp").innerHTML = "Você errou";
+}
+
+*********************
+Exemplo de uma página em HTML
+
+<html>
+<head>
+<title>Exemplo de HTML</title>
+</head>
+<body>
+<h1>Exemplo de HTML</h1>
+<p>Isto é um parágrafo</p>
+<p id="resp"></p>
+
+</body>
+</html>
+
+**********************
+Exemplo de CSS
+
+body{
+   font-family: Arial, sans-serif;
+}
+h1{
+   color: blue;
+}
+
+*************************
+Exercício 08 - encadeamento de condicional
+var NOME = prompt("Digite o nome do aluno");
+var N1 = parseFloat(prompt("Digite a 1a nota"));
+var N2 = parseFloat(prompt("Digite a 2a nota"));
+var N3 = parseFloat(prompt("Digite a 3a nota"));
+var N4 = parseFloat(prompt("Digite a 4a nota"));
+
+var MEDIA = (N1+N2+N3+N4) / 4;
+if(MEDIA >= 7){
+   alert("O(a) aluno(a) " + NOME + " está aprovado(a) com média: " + MEDIA);
+}
+else if(MEDIA >= 6){
+   alert("O(a) aluno(a) " + NOME + " está de recuperação com média: " + MEDIA);
+}
+else{
+   alert("O(a) aluno(a) " + NOME + " está reprovado(a) com média: " + MEDIA);
+}
+
+*************************
+Exercício 09 - par ou ímpar
+var NUM = parseInt(prompt("Digite um número",""));
+if(NUM % 2 == 0){
+   alert("O número é par");
+}
+else{
+   alert("O número é ímpar");
+}
+
+**********************
+Exercício 10 - laço de repetição PARA
+for(var CONT = 1; CONT <= 10; CONT++){
+   console.log(CONT + "a linha");
+}
+
+**********************
+Exercício 11 - laço de repetição REPITA (FAÇA)
+var CONT = 1;
+do{
+   console.log(CONT + "a linha");
+   CONT++;
+}
+while (CONT <= 10)
+
+***********************
+Exercício 12 - laço de repetição ENQUANTO
+var CONT = 1;
+while(CONT <= 10){
+   console.log(CONT + "a linha");
+   CONT++;
+}
+
+********************
+Exercício 13 - tabuada com laço PARA
+var NUM = parseInt(prompt("Digite um número",""));
+console.log("Tabuada do " + NUM);
+for(var CONT = 1; CONT <= 10; CONT++){
+   console.log(NUM + " X " + CONT + " = " + NUM*CONT);
+}
+
+********************
+Exercício 14 - tabuada com laço REPITA (FAÇA)
+var CONT = 1;
+var NUM = parseInt(prompt("Digite um número",""));
+console.log("Tabuada do " + NUM);
+do{
+   console.log(NUM + " X " + CONT + " = " + CONT*NUM);
+   CONT++;
+}while(CONT <= 10)
+
+**********************
+Exercício 15 - tabuada com laço ENQUANTO
+var CONT = 1;
+var NUM = parseInt(prompt("Digite um número",""));
+console.log("Tabuada do " + NUM);
+while(CONT <= 10){
+   console.log(NUM + " X " + CONT + " = " + CONT*NUM);
+   CONT++;
+}
+
+**************************
+Tabuada para com HTML, CSS e Javascript
+<html>
+<head>
+<title>Tabuada com laço PARA</title>
+</head>
+<body>
+<h1>Tabuada com laço PARA</h1>
+<h3 id="titulo"></h3>
+<p id="resp"></p>
+
+</body>
+</html>
+
+
+
+body{
+   font-family: Arial, sans-serif;
+   background-color: gray;
+}
+h1{
+   color: red;
+   text-shadow: 2px 2px 2px #FFF;
+}
+h3{
+   color: blue;
+}
+p{
+   font-style: italic;
+}
+
+
+
+var NUM = parseInt(prompt("Digite um número",""));
+document.getElementById("titulo").innerHTML = 
+"Tabuada do " + NUM;
+for(var CONT = 1; CONT <= 10; CONT++){
+   document.getElementById("resp").innerHTML += NUM + " X " + CONT + " = " + NUM*CONT + "<br />";
+}
+
+*********************
+Exercício 16 - variável acumuladora
+var TOT = 0;
+var NUM = parseInt(prompt("Digite um número ou 0 para parar",""));
+while(NUM != 0){
+   TOT = TOT + NUM;
+   NUM = parseInt(prompt("Digite um número ou 0 para parar",""));
+}
+console.log("A soma de todos os números é: " + TOT);
+
+*************************
+Exercício 17 - área total do imóvel
+var TOT = 0;
+var AREA = 0;
+var LARG = 0;
+var COMP = 0;
+var COMODO = "";
+var PARADA = "";
+while(PARADA != "N"){
+   COMODO = prompt("Digite o nome do cômodo","");
+   LARG = parseFloat(prompt("Digite a largura do cômodo",""));
+   COMP = parseFloat(prompt("Digite o comprimento do cômodo",""));
+   
+   AREA = LARG * COMP;
+   console.log("A área do(a) " + COMODO + " é de " + AREA + " m2");
+   TOT = TOT + AREA;
+   PARADA = prompt("Tem outro cômodo: (s)SIM ou (n)NÃO","").toUpperCase();
+}
+console.log("");
+console.log("A área total da casa é de " + TOT + " m2");
+
+*******************
+Exercício 18 - média de vários valores
+var CONT = 0;
+var MEDIA = 0;
+var SOMA = 0;
+var NUM = 0;
+while(NUM >= 0){
+   NUM = parseInt(prompt("Digite um número positivo",""));
+   if(NUM >= 0){
+      CONT++;
+      SOMA = SOMA + NUM;
+   }
+}
+MEDIA = SOMA / CONT;
+console.log("A média de todos os números é: " + MEDIA);
+
+**************************
+Exercício 19 - maior, menor e média
+var MAIOR = 0;
+var MENOR = 0;
+var MEDIA = 0;
+var CONT = 1;
+var TOT = 0;
+alert("Digite 10 números");
+while(CONT <= 10){
+   NUM = parseInt(prompt("Digite um número",""));
+   if(CONT == 1){
+      MAIOR = NUM;
+      MENOR = NUM;
+   }
+   else{
+      if(NUM > MAIOR){
+         MAIOR = NUM;
+      }
+      else{
+         MENOR = NUM;
+      }
+   }
+   CONT++;
+   TOT = TOT + NUM;
+}
+
+MEDIA = TOT / 10;
+console.log("O maior número é: " + MAIOR);
+console.log("O menor número é: " + MENOR);
+console.log("A média dos números é: " + MEDIA);
+
+
+***************************
+Exercício 20 - vetor
+var CONT = 0;
+var NOMES = [];
+for(CONT = 0; CONT <= 4; CONT++){
+   NOMES[CONT] = prompt("Digite um nome","");
+}
+for(CONT = 0; CONT <= 4; CONT++){
+   console.log(NOMES[CONT]);
+}
+
+*****************
+Exercício 21 - vetor inverso
+var VETA = [];
+var VETB = [];
+var CONT = 0;
+var POS = 4;
+for(CONT = 0; CONT <= 4; CONT++){
+   // Alimentando o VETA
+   VETA[CONT] = parseInt(prompt("Digite um número",""));
+   // Alimentando o VETB
+   VETB[POS] = VETA[CONT];
+   // Diminuindo o valor de POS
+   POS--;
+}
+
+// Imprimindo os vetores
+console.log("Valores do VETA");
+for(CONT = 0; CONT <= 4; CONT++){
+   console.log(VETA[CONT]);
+}
+
+console.log("");
+
+console.log("Valores do VETB");
+for(CONT = 0; CONT <= 4; CONT++){
+   console.log(VETB[CONT]);
+}
+
+
+***********************
+Exercício 22 - Vetor ao quadrado
+var VET = [];
+var NUM = 0;
+var CONT = 0;
+// Alimentando o vetor com o valor digitado elevado ao quadrado
+for(CONT = 0; CONT <= 4; CONT++){
+   NUM = parseInt(prompt("Digite um número",""));
+   VET[CONT] = Math.pow(NUM, 2);
+}
+// Imprimindo o vetor em ordem inversa
+for(CONT = 4; CONT >= 0; CONT--){
+   console.log(VET[CONT]);
+}   
+
+*************************
+Exercício 23 - vetor notas
+var SOMA = 0;
+var MEDIA = 0;
+var CONT1 = 0;
+var CONT2 = 0;
+var NOMES = [];
+var NOTAS = [];
+for(CONT1 = 0; CONT1 <= 4; CONT1++){
+   NOMES[CONT1] = prompt("Digite um nome","");
+   for(CONT2 = 1; CONT2 <= 4; CONT2++){
+      NOTAS[CONT2-1] = parseFloat(prompt("Digite a " + CONT2 + "a nota do aluno",""));
+      SOMA = SOMA + NOTAS[CONT2-1];
+   }
+   MEDIA = SOMA / 4;
+   console.log("");
+   if(MEDIA >= 7){
+      console.log("O(a) aluno(a) " + NOMES[CONT1] + " está aprovado(a) com média " + MEDIA);
+   }else{
+      console.log("O(a) aluno(a) " + NOMES[CONT1] + " está reprovado(a) com média " + MEDIA);
+   }
+   MEDIA = 0;
+   SOMA = 0;
+}
+
+************************
+Exercício 24 - vetor médias
+var NOMES = [];
+var MEDIAS = [];
+var RESULTADOS = [];
+var NOTA = 0;
+var SOMA = 0;
+var MEDIA = 0;
+var CONT1 = 0;
+var CONT2 = 1;
+for(CONT1 = 0; CONT1 <= 4; CONT1++){
+   NOMES[CONT1] = prompt("Digite um nome","");
+   for(CONT2 = 1; CONT2 <= 4; CONT2++){
+       NOTA = parseFloat(prompt("Digite a " + CONT2 + "a nota",""));
+       SOMA = SOMA + NOTA;
+   }
+   MEDIA = SOMA / 4;
+   MEDIAS[CONT1] = MEDIA;
+   if(MEDIA >= 7) {
+      RESULTADOS[CONT1] = "Aprovado";
+   }else{
+      RESULTADOS[CONT1] = "Reprovado";
+   }
+   SOMA = 0;
+   MEDIA = 0;
+}
+
+//Mostrando os dados do aluno
+for(CONT1 = 0; CONT1 <= 4; CONT1++){
+   console.log("Aluno(a): " + NOMES[CONT1]);
+   console.log("Média: " + MEDIAS[CONT1]);
+   console.log("Resultado: " + RESULTADOS[CONT1]);
+   console.log("");
+}
+
+***************************
+Exercício 25 - vetor união
+var CONT = 0;
+var VETA = [];
+var VETB = [];
+var VETC = [];
+// Alimentando o VETA
+for (CONT = 0; CONT <= 2; CONT++){
+   VETA[CONT] = parseInt(prompt("Digite um número",""));
+}
+
+// Alimentando o VETB
+for (CONT = 0; CONT <= 2; CONT++){
+   VETB[CONT] = parseInt(prompt("Digite um número",""));
+}
+
+// Unindo os vetores VETA e VETB no vetor VETC
+for(CONT = 0; CONT <= 2; CONT++){
+   if(VETA[CONT] != VETB[CONT]){
+      VETC[CONT] = VETA[CONT]
+      VETC[CONT+3] = VETB[CONT];
+   }else{
+      VETC[CONT] = VETA[CONT];
+   }
+}
+console.log("");
+console.log("VETA");
+for(CONT = 0; CONT <= 2; CONT++){
+   console.log(VETA[CONT]);
+}
+console.log("");
+console.log("VETB");
+for(CONT = 0; CONT <= 2; CONT++){
+   console.log(VETB[CONT]);
+}
+console.log("");
+console.log("VETC");
+for(CONT = 0; CONT <= 5; CONT++){
+   console.log(VETC[CONT]);
+}
+
+************************
+Exercício 26 - Vetor ordenado (comparar com o VisualG)
+var CONT = 0;
+var VET = [];
+// Alimentando o vetor
+for(CONT = 0; CONT <= 9 ; CONT++){
+   VET[CONT] = parseInt(prompt("Digite um número",""));
+}
+
+//Ordenando o vetor e imprimindo
+console.log(VET.sort());
+
+*************************
+Exercício 27 - Somando vetores
+var VET1 = [];
+var VET2 = [];
+var VET3 = [];
+var CONT = 0;
+//Alimentando o primeiro vetor
+for(CONT = 0; CONT <= 9; CONT++){
+   VET1[CONT] = parseInt(prompt("Digite um número",""));
+}
+//Alimentando o segundo vetor
+for(CONT = 0; CONT <= 9; CONT++){
+   VET2[CONT] = parseInt(prompt("Digite um número",""));
+}
+//Alimentando o terceiro vetor
+for(CONT = 0; CONT <= 9; CONT++){
+   VET3[CONT] = VET1[CONT] + VET2[CONT];
+}
+
+//Imprimindo os vetores
+console.log("Conteúdo do vetor 1");
+for(CONT = 0; CONT <= 9; CONT++){
+   console.log(VET1[CONT]);
+}
+console.log("Conteúdo do vetor 2");
+for(CONT = 0; CONT <= 9; CONT++){
+   console.log(VET2[CONT]);
+}
+console.log("Conteúdo do vetor 3");
+for(CONT = 0; CONT <= 9; CONT++){
+   console.log(VET3[CONT]);
+}
+
+
+
+****************************************
+
+Uma "data mágica" é quando o dia multiplicado pelo mês resulta
+no ano. Exemplo: 09/02/18, 02/09/18, 13/04/52. Sendo assim,
+crie um algoritmo que leia uma data no formato dd/mm/yy, com
+dois dígitos para o dia, o mês e o ano, e o sistema verifica
+se é ou não uma "data mágica".
+
+- Salve como data-magica.alg
+fabioc@sp.senac.br
+
+*******************************************
+
+Um brechó revende produtos usados, e fixa o preço de venda
+de cada produto conforme o valor de sua aquisição: se o preço
+de aquisição de um produto for menor que R$ 50,00, ele deve
+ser vendido por um preço 45% maior; caso contrário, o
+lucro será de 30%. Crie um algoritmo que leia o nome do
+produto e o valor de aquisição no final mostre o seu valor de venda.
+
+- Salve como brecho.alg
+fabioc@sp.senac.br
+
+*******************************************
+
+Crie um algoritmo que peça a temperatura atual e conforme a leitura
+imprima o resultado de acordo com a tabela abaixo:
+          Temperatura         	Resultado
+          Até 15 graus        	Muito frio
+          De 16 a 23 graus    	Frio
+          De 24 a 26 graus    	Agradável
+          De 27 a 30 graus    	Quente
+          Acima de 31 graus   	Muito quente
+
+- Salve como termometro-interativo.alg
+fabioc@sp.senac.br
+
+*********************************
+
+Crie um algoritmo para calcular o IMC de uma pessoa, o sistema
+deve solicitar a altura e o peso da pessoa e no final imprimir
+a resposta conforme tabela abaixo:
+O cálculo é feito pelo peso dividido pela altura ao quadrado
+           IMC                 	Situação
+           < 16                	Subpeso severo
+           16 a 19.9         Subpeso
+           20 a 24.9         Normal
+           25 a 29.9         Sobrepeso
+           30 a 39.9         Obeso
+           > 40                	Obeso mórbido
+
+- Salve como imc.alg
+fabioc@sp.senac.br
+
+**************************
+
+Simular o funcionamento de uma máquina de café onde o usuário
+seleciona uma opção de café, insere o valor referente ao café
+e a máquina deve verificar a necessidade de fazer o troco e
+informar o valor faltante. Se tudo estiver ok a máquina entrega
+o café para o usuário.
+           Tipos de café: 	curto, 	expresso,	     longo, 	     com leite
+           Preços:        		1,00   	2,00      	     1,50   	     1,50
+
+- Salve como maquina-de-cafe.alg
+fabioc@sp.senac.br
+
+******************************
+
+Crie um algoritmo que leia um número entre 1 e 10 e exiba
+o correspondente em número romano. Se o número estiver
+fora do intervalo de 1 a 10, mostre uma mensagem de erro.
+
+- Salve como numeros-romanos.alg
+fabioc@sp.senac.br
+
+******************************
+
+Crie um algoritmo que leia dois números inteiros e os armazene em duas variáveis inteiras, N1 e N2.
+Após compará-las, o algoritmo tem que garantir que o menor número fique armazenado em N1 e o maior em N2. Imprima as variáveis na ordem: N1 e depois a N2.
+
+- Salve como maior-menor.alg
+fabioc@sp.senac.br
+
+***************************
+
+Crie um algoritmo que a partir de duas cores primárias fornecidas pelo usuário, determine qual cor seria obtida pela mistura delas. Considere as informações fornecidas abaixo:
+As cores vermelho, azul e amarelo são chamadas de cores primárias porque não podem ser obtidas a partir de outras cores e, quando misturadas, resultam numa cor secundária, de acordo com as seguintes regras:
+                           vermelho + azul = roxo
+                           vermelho + amarelo = laranja
+                           azul + amarelo = verde
+Caso o usuário escolha algum valor errado, informe cor nula.
+
+- Salve como cores-primarias.alg
+fabioc@sp.senac.br
+
+************************************
+
+Uma loja de panelas vende cada panela por R$ 150.00, mas concede descontos
+conforme a quantidade comprada, conforme a tabela a seguir:
+
+Quantidade de panelas compradas 	Desconto
+	10 - 19 			20%
+	20 - 49 			30%
+	50 - 99 			40%
+	100 ou mais 		50%
+
+Crie um algoritmo que leia o número de panelas compradas, e informe o valor original da compra, o valor do desconto (se houver) e o valor total da compra após o desconto.
+
+- Salve como loja-panelas.alg
+fabioc@sp.senac.br
+
+*******************************
+
+Crie um algoritmo que, a partir do valor do comprimento dos três lados de um triângulo, classifique-o em equilátero, isósceles ou escaleno. Lembre-se:
+
+Triângulo equilátero - todos os seus lados são iguais
+Triângulo isósceles - apenas um dos lados tiver comprimento diferente 
+Triângulo escaleno - todos os lados tiverem comprimentos diferentes 
+
+- Salve como triangulos.alg
+fabioc@sp.senac.br
+
+*******************************
+
+Um carpinteiro esculpe placas personalizadas para estabelecimentos comerciais e deseja um programa que faça seus orçamentos, considerando as seguintes informações:
+a. O valor mínimo de qualquer placa é de R$ 300,00;
+b. Placas de angelim custam R$ 150,00 adicionais, 
+c. Placas de pinus não possuem nenhum custo extra;
+d. Frases com até 12 caracteres estão incluídas no valor mínimo; 
+e. Frases maiores, são cobrados R$ 15,00 por caractere;
+f. Para placas com dizeres brancos ou pretos não se cobra adicional, 
+g. Se ele contiver letras douradas, cobra-se R$ 60,00 a mais.
+
+Baseado nessas informações, construa um algoritmo que leia o número de um orçamento, o nome do cliente, tipo de madeira (angelim ou pinus), número de caracteres da mensagem e a cor dos caracteres (branco, preto ou dourado). Ao final, imprima todos os dados de entrada e o preço da placa orçada. 
+
+- Salve como carpinteiro.alg
+fabioc@sp.senac.br
+
+
+************************************
+
+Uma loja deseja recompensar os seus empregados de acordo com o número de vendas que eles realizaram num determinado mês. Crie um algoritmo que leia o nome e o número de vendas de um empregado e calcule o seu bônus, conforme a seguir:
+
+a. Se o número de vendas for até 30, bônus de R$ 250,00;
+b. Se o número de vendas for menor ou igual a 80, bônus de R$ 500,00;
+c. Se o número de vendas for menor ou igual a 200, bônus de R$ 1.000,00;
+d. Se o número de vendas for maior que 200, bônus de R$ 2.000,00.
+
+- Salve como bonus-empregados.alg
+fabioc@sp.senac.br
+
+**************************************
+
+Crie um algoritmo para ler o número total de eleitores de um município, o número de votos brancos, nulos e válidos. Calcular e mostrar o percentual que cada um representa em relação ao total de eleitores.
+
+- Salvar como eleitores.alg
+fabioc@sp.senac.br
+
+*************************************
+
+Crie um algoritmo para ler o nome e o salário atual de um funcionário e o percentual de reajuste. Calcular e mostrar o valor do novo salário.
+
+- Salvar como ajuste-salarial.alg
+fabioc@sp.senac.br
+
+************************************
+
+Crie um algoritmo que leia o nome e as três notas de um aluno, calcule e mostre seu nome, a média final e o resultado deste aluno se Aprovado ou Reprovado.
+Considerar duas coisas:
+
+1) A média é ponderada e que o peso das notas é 2, 3 e 5
+2) A média para aprovação é 7
+
+A fórmula para o cálculo da média final é:
+
+                                    n1 * 2 + n2 * 3 + n3 * 5
+          mediafinal = -----------------------------------
+                                                   10
+
+- Salvar como media-ponderada.alg
+fabioc@sp.senac.br
+
+******************************************
+
+Ler 10 valores inteiros, calcular e mostrar a média aritmética desses valores lidos, use qualquer laço de repetição.
+
+- Salvar como media-laco.alg
+fabioc@sp.senac.br
+
+*****************************************
+
+Uma loja está levantando o valor total de todas as mercadorias em estoque. Crie um algoritmo que permita a entrada das seguintes informações:
+
+a) O número total de mercadorias no estoque
+b) O valor de cada mercadoria
+
+Ao final imprimir o valor total em estoque e a média de valor das mercadorias.
+
+- Salvar como estoque.alg
+fabioc@sp.senac.br
+
+*****************************************
+
+Crie um algoritmo que imprima as seguintes seqüências de números:
+(1, 1 2 3 4 5 6 7 8 9 10)
+(2, 1 2 3 4 5 6 7 8 9 10)
+(3, 1 2 3 4 5 6 7 8 9 10)
+(4, 1 2 3 4 5 6 7 8 9 10) e assim sucessivamente, incluindo os parenteses, até que o primeiro número (antes da vírgula), chegue a 10.
+
+- Salvar como sequencia.alg
+fabioc@sp.senac.br
+
+*****************************************
+
+Escreva um algoritmo que imprima as tabuadas de 1 a 10 para os números de 1 a 10 e gere também os títulos das tabuadas.
+
+- Salvar como gerador-de-tabuada.alg
+fabioc@sp.senac.br
+
+*****************************************
+
+Crie um algoritmo que desenhe um quadrado de 5X10 conforme imagem abaixo: Obs.: Use uma matriz.
+
+                 **********
+                 **********
+                 **********
+                 **********
+
+- Salvar como quadrado-matriz.alg
+fabioc@sp.senac.br
+
+****************************************
+
+Crie um algoritmo que solicita um número de 1 a 10 ou 0 para sair e desenhe na tela um triângulo com o valor informado, veja exemplos:
+
+          4               5                   6
+          33             44                55
+          222           333             444
+          1111         2222          3333
+                            11111        22222
+                                                111111
+O sistema só deve aceitar números de 1 a 10 dentro de um laço de repetição.
+
+- Salvar como desenha-triangulo.alg
+fabioc@sp.senac.br
+
+
+
+
+
+
+
+
+
+
